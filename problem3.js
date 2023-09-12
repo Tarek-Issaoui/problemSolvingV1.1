@@ -49,11 +49,14 @@ object = {
 
 function getRootProperty(object, val) {
     for (let key in object) {
-        if (String(object[key]) === '[object Object]') {
-            getRootProperty(object[key], val)
+        // console.log(String(object[key]))
+        var prop=object[key]
+        if (String(prop) === '[object Object]') {
+            return getRootProperty(prop, val)
         }
-        if (Array.isArray(object[key])) {
-            if (object[key].includes(val)) return key
+        if (Array.isArray(prop)) {
+            console.log(prop)
+            if (prop.includes(val)){ return key}
         }
 
     }

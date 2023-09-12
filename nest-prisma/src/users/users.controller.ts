@@ -22,7 +22,7 @@ export class UsersController {
   findOne(@Param('id') id: string) {
     return this.usersService.findOne(id);
   }
-  @Get('quntity/:qy')
+  @Get('quntity/:qty')
   findByCategory(@Param('qty') qty:number){
     return this.usersService.findByQuantity(+qty)
   }

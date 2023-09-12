@@ -29,8 +29,8 @@ export class UsersService {
         some :{
           products:{
             some:{
-              quantitys:{
-                gt:qty
+              quantity:{
+                gte:qty
               }
             }
           }
