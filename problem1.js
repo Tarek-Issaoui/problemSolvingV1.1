@@ -10,10 +10,12 @@ const alphaCount = (alphabet, text) => {
     let count = 0
     for (let e of alphabet) {
         for (let e1 of text) {
-            e1 === e && count++; 
+            e1.toLowerCase() === e.toLowerCase() && count++; 
             store[e.toLowerCase()] = count
         }
-
+        count=0
     }
     return JSON.stringify(store).slice(1, JSON.stringify(store).length - 1)
 };
+
+console.log(alphaCount("aBc", "aabbccdd"))

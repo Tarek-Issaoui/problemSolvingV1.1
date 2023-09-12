@@ -60,3 +60,5 @@ function getRootProperty(object, val) {
     return null
 }
 console.log(getRootProperty(object, 9));
+
+
